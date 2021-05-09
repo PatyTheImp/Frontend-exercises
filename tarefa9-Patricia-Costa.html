@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios de Cálculo JS</title>
+
+    <script>
+
+        function produto() {
+            var inputPrice = document.getElementById("txtPrice");
+            var inputIVA = document.getElementById("txtIVA");
+
+            var divProduto = document.getElementById("divProduto");
+
+            var price = parseFloat(inputPrice.value);
+            var IVA = parseFloat(inputIVA.value);
+
+            var priceIVA = (IVA / 100 * price) + price;
+
+            divProduto.innerHTML = "<h3> PREÇO DO PRODUTO COM IVA: " + priceIVA.toFixed(2) + "€</h3>";
+        }
+
+        function salario() {
+            var inputHoras = document.getElementById("txtHoras");
+            var inputValorHora = document.getElementById("txtValorHora");
+
+            var divSalario = document.getElementById("divSalario");
+
+            var horas = parseInt(inputHoras.value);
+            var valorHora = parseFloat(inputValorHora.value);
+
+            var salBruto = horas * valorHora;
+            var ss = salBruto * .11;
+            var irs = salBruto * .14;
+            var salLiq = salBruto - (ss + irs);
+
+            divSalario.innerHTML = "<h3> SALÁRIO BRUTO: " + salBruto.toFixed(2) + "€</h3>";
+            divSalario.innerHTML += "<h3> SS: " + ss.toFixed(2) + "€</h3>";
+            divSalario.innerHTML += "<h3> IRS: " + irs.toFixed(2) + "€</h3>";
+            divSalario.innerHTML += "<h3> SALÁRIO LÍQUIDO: " + salLiq.toFixed(2) + "€</h3>";
+
+        }
+
+        function idade() {
+            var inputAnos = document.getElementById("txtAnos");
+            var inputMeses = document.getElementById("txtMeses");
+            var inputDias = document.getElementById("txtDias");
+
+            var divIdade = document.getElementById("divIdade");
+
+            var anos = parseInt(inputAnos.value);
+            var meses = parseInt(inputMeses.value);
+            var dias = parseInt(inputDias.value);
+
+            var totalDias = dias + (meses * 30) + (anos * 365);
+
+            divIdade.innerHTML = "<h3> TOTAL DE DIAS: " + totalDias + "</h3>";
+        }
+
+        function viajem() {
+            var inputDistancia = document.getElementById("txtDistancia");
+            var inputL100 = document.getElementById("txtL100");
+            var inputPreco = document.getElementById("txtPreco");
+
+            var divViajem = document.getElementById("divViajem");
+
+            var distancia = parseFloat(inputDistancia.value);
+            var l100 = parseFloat(inputL100.value);
+            var preco = parseFloat(inputPreco.value);
+
+            var custo = (distancia * l100 / 100) * preco; 
+
+            divViajem.innerHTML = "<h3> CUSTO DA VIAJEM: " + custo.toFixed(2) + "€</h3>";
+        }
+
+        function horas() {
+            var inputSec = document.getElementById("txtSec");
+
+            var divHoras = document.getElementById("divHoras");
+
+            var totalSec = parseFloat(inputSec.value);
+
+            var hours = Math.floor(totalSec / 3600);
+            var min = Math.floor((totalSec - (hours * 3600)) / 60);
+            var sec = totalSec - (hours * 3600) - (min * 60);
+
+            divHoras.innerHTML = "<h3>" + hours + " horas " + min + " minutos " + sec + " segundos.</h3>";
+
+        }
+
+    </script>
+</head>
+<body>
+    <h1>Produto com IVA</h1>
+
+    <input type="number" id="txtPrice" placeholder="PREÇO DO PRODUTO">
+    <input type="number" id="txtIVA" placeholder="PERCENTAGEM DO IVA">
+    <button onclick="produto()">EXECUTAR</button>
+
+    <div id="divProduto"></div>
+
+
+    <h1>Salário</h1>
+
+    <input type="number" id="txtHoras" placeholder="Nº DE HORAS DE TRABALHO POR MÊS">
+    <input type="number" id="txtValorHora" placeholder="VALOR HORA">
+    <button onclick="salario()">EXECUTAR</button>
+
+    <div id="divSalario"></div>
+
+
+    <h1>Idade</h1>
+
+    <h2>Expresse a sua idade em anos, meses e dias:</h2>
+    <input type="number" id="txtAnos" placeholder="ANOS">
+    <input type="number" id="txtMeses" placeholder="MESES">
+    <input type="number" id="txtDias" placeholder="DIAS">
+    <button onclick="idade()">EXECUTAR</button>
+
+    <div id="divIdade"></div>
+
+
+    <h1>Custo de uma Viajem</h1>
+
+    <input type="number" id="txtDistancia" placeholder="DISTANCIA EM KM">
+    <input type="number" id="txtL100" placeholder="LITROS / 100 KM">
+    <input type="number" id="txtPreco" placeholder="PREÇO DO LITRO">
+    <button onclick="viajem()">EXECUTAR</button>
+
+    <div id="divViajem"></div>
+
+
+    <h1>Horas</h1>
+
+    <input type="number" id="txtSec" placeholder="SEGUNDOS">
+    <button onclick="horas()">EXECUTAR</button>
+
+    <div id="divHoras"></div>
+
+</body>
+</html>
