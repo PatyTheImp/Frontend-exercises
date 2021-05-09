@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Syne&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@600&display=swap" rel="stylesheet">
+
+    <title>Formulário</title>
+
+</head>
+<body>
+    <header>
+        <h1>Cadastre-se!!!</h1>
+    </header>
+
+    <section class="container">
+        <div class="row">
+           
+            <div class="col-md-6">
+                <div class="form">
+
+                    <img src="imagens/user-edit-solid.svg" class="icon" alt="">
+                    <label for="txtnome">NOME:</label>
+                    <input type="text" id="txtnome" placeholder="Paty Costa"> 
+
+                    <img src="imagens/at-solid.svg"class="icon" alt="">
+                    <label for="txtmail">E-MAIL:</label>
+                    <input type="email" id="txtmail" placeholder="paty@gmail.com">
+
+                    <img src="imagens/unlock-solid.svg"class="icon" alt="">
+                    <label for="txtpassword">SENHA:</label>
+                    <input type="password" id="txtpassword" placeholder="password123">
+
+                    <img src="imagens/lock-solid.svg"class="icon" alt="">
+                    <label for="txtpasswordC">CONFIRME A SENHA:</label>
+                    <input type="password" id="txtpasswordC" placeholder="password123">
+
+                    <img src="imagens/phone-solid.svg"class="icon" alt="">
+                    <label for="txttelefone">TELEFONE:</label>
+                    <input type="number" id="txttelefone" placeholder="964857963">
+
+                    <img src="imagens/birthday-cake-solid.svg"class="icon" alt="">
+                    <label>DATA DE NASCIMENTO:</label>
+                    <input type="date" id="dtNasc">
+
+                    <img src="imagens/venus-mars-solid.svg"class="icon" alt="">
+                    <label for="">GÉNERO:</label>
+                    <input type="radio" id="btnmasc" name="genero"> <label class="gen">Masculino</label>
+                    <input type="radio" id="btnfem" name="genero"> <label class="gen">Feminino</label>
+                    <br>
+
+                    <img src="imagens/city-solid.svg"class="icon" alt="">
+                    <label for="cmdCidade">CIDADE:</label>
+                    <select id="cmbCidade">
+                        <optgroup label="Lisboa">
+                            <option>Lisboa Centro</option>
+                            <option>Lisboa Oriente</option>
+                            <option>Lisboa Avenidas Novas</option>
+                        </optgroup>
+                        <option>Setúbal</option>
+                        <option>Sintra</option>
+                        <option>Loures</option>
+                    </select>
+
+                    <img src="imagens/comment-dots-solid.svg"class="icon" alt="">
+                    <label for="txtobs">OBSERVAÇÕES:</label>
+                    <textarea id="txtobs" placeholder="Diga-nos a sua opinião!"></textarea>
+
+                    <button id="btnguardar" type="button" class="btn btn-outline-dark">GUARDAR</button>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <img src="imagens/people.png" alt="" class="boneco">
+            </div>
+        </div>
+    </section>
+</body>
+</html>
