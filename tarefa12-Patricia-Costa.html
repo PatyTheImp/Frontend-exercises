@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarefa 12</title>
+
+    <script>
+
+        function aprovacao() {
+
+            var inputNome = document.getElementById("txtNome");
+            var inputNota1 = document.getElementById("txtNota1");
+            var inputNota2 = document.getElementById("txtNota2");
+            var inputNota3 = document.getElementById("txtNota3");
+            var inputAulas = document.getElementById("txtAulas");
+            var inputFaltas = document.getElementById("txtFaltas");
+
+            var div = document.getElementById("divResposta");
+
+            var nome = inputNome.value;
+            var nota1 = parseFloat(inputNota1.value);
+            var nota2 = parseFloat(inputNota2.value);
+            var nota3 = parseFloat(inputNota3.value);
+            var aulas = parseFloat(inputAulas.value);
+            var faltas = parseFloat(inputFaltas.value);
+
+            var percentFaltas = faltas / aulas;
+            var media = (nota1 + nota2 + nota3) / 3;
+
+            if (percentFaltas > .25)
+                div.innerHTML = "<h3>" + nome + " está Reprovado/a por Faltas</h3>";
+            else if (media < 12)
+                div.innerHTML = "<h3>" + nome + " está Reprovado/a por Média</h3>";
+            else if (media >= 12 && media < 14)
+                div.innerHTML = "<h3>" + nome + " está Aprovado/a com média de " + media + " (Suficiente)</h3>";
+            else if (media >= 14 && media < 18)
+                div.innerHTML = "<h3>" + nome + " está Aprovado/a com média de " + media + " (Bom)</h3>";
+            else
+                div.innerHTML = "<h3>" + nome + " está Aprovado/a com média de " + media + " (Muito Bom)</h3>";
+        }
+
+    </script>
+
+</head>
+
+<body>
+    
+    <h1>Aprovado ou Reprovado?</h1>
+
+    <input type="text" id="txtNome" placeholder="NOME">
+    <input type="number" id="txtNota1" placeholder="NOTA 1">
+    <input type="number" id="txtNota2" placeholder="NOTA 2">
+    <input type="number" id="txtNota3" placeholder="NOTA 3">
+    <input type="number" id="txtAulas" placeholder="NÚMERO DE AULAS">
+    <input type="number" id="txtFaltas" placeholder="NÚMERO DE FALTAS">
+
+    <button onclick="aprovacao()">EXECUTAR</button>
+
+    <div id="divResposta"></div>
+</body>
+</html>

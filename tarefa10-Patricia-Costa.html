@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estruturas de Decisão V1</title>
+
+    <script>
+
+        function maiorMenor() {
+            var inputNum1 = document.getElementById("txtNum1");
+            var inputNum2 = document.getElementById("txtNum2");
+
+            var div = document.getElementById("divMaiorMenor");
+
+            var num1 = parseInt(inputNum1.value);
+            var num2 = parseInt(inputNum2.value);
+
+            if (num1 > num2)
+                div.innerHTML = "<h3>" + num1 + " é o maior número.</h3>";
+            else if (num1 < num2)
+                div.innerHTML = "<h3>" + num2 + " é o maior número.</h3>";
+            else
+                div.innerHTML = "<h3>Os números são iguais.</h3>";
+        }
+
+        function anoBissexto() {
+            var inputAno = document.getElementById("txtAno");
+
+            var div = document.getElementById("divAnoBissexto");
+
+            var ano = parseInt(inputAno.value);
+
+            if (ano % 4 != 0)
+                div.innerHTML = "<h3>O ano de " + ano + " não é bissexto.</h3>"
+            else if (ano % 100 != 0)
+                div.innerHTML = "<h3>O ano de " + ano + " é bissexto.</h3>"
+            else if (ano % 400 != 0)
+                div.innerHTML = "<h3>O ano de " + ano + " não é bissexto.</h3>"
+            else
+                div.innerHTML = "<h3>O ano de " + ano + " é bissexto.</h3>"
+        }
+
+        function mesExtenso() {
+            var inputMes = document.getElementById("txtMes");
+
+            var div = document.getElementById("divMesExtenso");
+
+            var mes = parseInt(inputMes.value);
+            var mesExtenso = "";
+
+            switch (mes) {
+                case 1 : mesExtenso = "Janeiro";
+                    break;
+                case 2 : mesExtenso = "Fevereiro";
+                    break;
+                case 3 : mesExtenso = "Março";
+                    break;
+                case 4 : mesExtenso = "Abril";
+                    break;
+                case 5 : mesExtenso = "Maio";
+                    break;
+                case 6 : mesExtenso = "Junho";
+                    break;
+                case 7 : mesExtenso = "Julho";
+                    break;
+                case 8 : mesExtenso = "Agosto";
+                    break;
+                case 9 : mesExtenso = "Setembro";
+                    break;
+                case 10 : mesExtenso = "Outubro";
+                    break;
+                case 11 : mesExtenso = "Novembro";
+                    break;
+                case 12 : mesExtenso = "Dezembro";
+            }
+
+            div.innerHTML = "<h3>" + mesExtenso + "</h3>"
+        }
+
+    </script>
+
+</head>
+<body>
+
+    <h1>Maior, menor ou igual</h1>
+
+    <input type="number" id="txtNum1" placeholder="NÚMERO INTEIRO 1">
+    <input type="number" id="txtNum2" placeholder="NÚMERO INTEIRO 2">
+    <button onclick="maiorMenor()">EXECUTAR</button>
+
+    <div id="divMaiorMenor"></div>
+
+    <h1>Ano bissexto</h1>
+
+    <input type="number" id="txtAno" placeholder="ANO">
+    <button onclick="anoBissexto()">EXECUTAR</button>
+
+    <div id="divAnoBissexto"></div>
+
+    <h1>Mês por extenso</h1>
+
+    <input type="number" id="txtMes" placeholder="MÊS">
+    <button onclick="mesExtenso()">EXECUTAR</button>
+
+    <div id="divMesExtenso"></div>
+
+</body>
+</html>

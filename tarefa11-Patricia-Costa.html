@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarefa 11</title>
+
+    <script>
+
+
+
+        function ex1() {
+
+            var inputDia = document.getElementById("txtDia");
+            var inputMes = document.getElementById("txtMes");
+            var inputAno = document.getElementById("txtAno");
+
+            var div = document.getElementById("divData");
+
+            var dia = parseInt(inputDia.value);
+            var mes = parseInt(inputMes.value);
+            var ano = parseInt(inputAno.value);
+
+            var div = document.getElementById("divData");
+
+            if (ano >= 1900 && ano <= 2100 && mes >= 1 && mes <= 12 && dia >= 1 && dia <= 31)
+                div.innerHTML = "<h3>Data válida</h3>";
+            else
+                div.innerHTML = "<h3>Data inválida</h3>";
+        }
+
+        function ex2() {
+
+            var inputDia = document.getElementById("txtDia");
+            var inputMes = document.getElementById("txtMes");
+            var inputAno = document.getElementById("txtAno");
+
+            var div = document.getElementById("divData");
+
+            var dia = parseInt(inputDia.value);
+            var mes = parseInt(inputMes.value);
+            var ano = parseInt(inputAno.value);
+
+            var div = document.getElementById("divData");
+
+            if (!(ano >= 1900 && ano <= 2100 && mes >= 1 && mes <= 12 && dia >= 1 && dia <= 31))
+                div.innerHTML = "<h3>Data inválida</h3>";
+            else if ((mes == 2 && dia > 28) || ((mes == 4 || mes == 6 || mes == 9 || mes == 11) && dia > 30))
+                div.innerHTML = "<h3>Data inválida</h3>";
+            else
+                div.innerHTML = "<h3>Data válida</h3>";
+        }
+
+        
+        function ex3() {
+
+            var inputDia = document.getElementById("txtDia");
+            var inputMes = document.getElementById("txtMes");
+            var inputAno = document.getElementById("txtAno");
+
+            var div = document.getElementById("divData");
+
+            var dia = parseInt(inputDia.value);
+            var mes = parseInt(inputMes.value);
+            var ano = parseInt(inputAno.value);
+
+            var div = document.getElementById("divData");
+
+            if (!(ano >= 1900 && ano <= 2100 && mes >= 1 && mes <= 12 && dia >= 1 && dia <= 31))
+                div.innerHTML = "<h3>Data inválida</h3>";
+            else if ((mes == 2 && dia > 29) || ((mes == 4 || mes == 6 || mes == 9 || mes == 11) && dia > 30))
+                div.innerHTML = "<h3>Data inválida</h3>";
+            else if (!(ano % 400 == 0 || (ano % 4 == 0 && ano % 100 != 0)) && mes == 2 && dia > 28)
+                div.innerHTML = "<h3>Data inválida</h3>";
+            else
+                div.innerHTML = "<h3>Data válida</h3>";
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+    <h1>Insira uma Data</h1>
+
+    <input type="number" id="txtDia" placeholder="DIA">
+    <input type="number" id="txtMes" placeholder="MES">
+    <input type="number" id="txtAno" placeholder="ANO">
+
+    <button onclick="ex1()">EXERCÍCIO 1</button>
+    <button onclick="ex2()">EXERCÍCIO 2</button>
+    <button onclick="ex3()">EXERCÍCIO 3</button>
+
+    <div id="divData"></div>
+
+</body>
+
+</html>
