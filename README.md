@@ -1,4 +1,4 @@
-# <em>Frontend-exercises</em>
+# <em>Frontend exercises</em>
 Exercises about frontend web development I've made from IEFP's programmer professional course.
 
 ## Tarefa 1:
