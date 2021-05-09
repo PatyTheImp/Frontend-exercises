@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        function primoFunc() {
+
+            var inputPrimo = document.getElementById("txtPrimo");
+            var div = document.getElementById("divPrimo");
+
+            var primo = parseFloat(inputPrimo.value);
+            var verificador = 0;
+
+            //Para impedir que se insiram números não naturais
+            if (primo != Math.floor(primo) || primo <= 0)
+                div.innerHTML = "<h3>Input inválido. Insira um número natural.</h3>";
+            else {
+                primo = parseInt(primo);
+
+                for (var i = 2; i < primo; i++) {
+                    if (primo % i == 0) 
+                        verificador++;
+                }
+
+                if (verificador > 0 || primo == 1)
+                    div.innerHTML = "<h3>" + primo + " não é primo.</h3>";
+                else
+                    div.innerHTML = "<h3>" + primo + " é primo.</h3>";
+            }
+        }
+    </script>
+
+</head>
+<body>
+
+    <h1>Números Primos</h1>
+
+    <input type="number" id="txtPrimo" placeholder="NÚMERO NATURAL">
+    <button onclick="primoFunc();">EXECUTAR</button>
+
+    <div id="divPrimo"></div>
+    
+</body>
+</html>
