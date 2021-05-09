@@ -22,3 +22,6 @@ Decision constructs in JavaScript.
 
 ## Tarefa 13:
 Learning a little bit about JavaScript HTML DOM.
+
+## Tarefa 14, 15:
+JavaScript for loops.
