@@ -25,3 +25,12 @@ Learning a little bit about JavaScript HTML DOM.
 
 ## Tarefa 14, 15:
 JavaScript for loops.
+
+## Tarefa 16:
+More DOM and loops.
+
+## Tarefa 17:
+Learning how to make a slideshow.
+
+## Projeto Final:
+This module final project. I've made a portfolio exposing a hobby of mine 😋
