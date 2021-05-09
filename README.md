@@ -14,5 +14,8 @@ Learning about Bootstrap's drop-down menu.
 ## Tarefa 8:
 Learning about HTML forms.
 
-## Tarefa 9, 10 and 11:
+## Tarefa 9:
+Introdution to JavaScript with some calculations.
+
+## Tarefa 10, 11 and 12:
 Decision constructs in JavaScript.
