@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <title>Galeria Dinâmica</title>
+
+    <script>
+        function criarImg(x) {
+            //Cria um elemento img no HTML
+            var img = document.createElement("IMG");
+
+            //Atribui uma imagem específica á img anteriormente criada
+            img.setAttribute("src", "imagens/algarve" + x + ".jpg");
+            //Adciona essa imagem á div 
+            document.getElementById("galeria").appendChild(img);
+        }
+
+        function galeriaDinamica() {
+            var menuInicial = document.getElementById("inicio");
+            var num = parseInt(document.getElementById("txtNum").value);
+
+            //Para o input inicial desaparecer
+            menuInicial.style.visibility = "hidden";
+
+            //Vai colocando as imagens na galeria
+            for (i = 1; i <= num; i++) {
+                if (i <= 6)
+                    criarImg(i);
+                else { //Para as imagens repetirem-se :)
+                    j = i;
+                    while (j > 6)
+                        j -= 6;
+                    criarImg(j);
+                }
+            }
+                
+        }
+    </script>
+
+</head>
+<body>
+
+    <div id="galeria"></div>
+
+    <div id="inicio">
+        <h1>CRIE A SUA PRÓPRIA GALERIA</h1>
+        <input type="number" id="txtNum" placeholder="INSIRA A QUANTIDADE DE IMAGENS">
+        <button onclick="galeriaDinamica();">CRIAR GALERIA</button>
+    </div> 
+
+</body>
+</html>

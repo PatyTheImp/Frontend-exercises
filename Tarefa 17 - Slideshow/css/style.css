@@ -1,0 +1,97 @@
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#slideshow {
+    width: 50%;
+    position: relative;
+    left: 25%;
+}
+
+.slide {
+    display: none;
+}
+
+.slide img {
+    width: 100%;
+}
+
+.setinhas {
+    position: absolute;
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    font-size: large;
+    padding: 1%;
+    transition: 1s;
+    cursor: pointer;
+}
+
+.setinhas:hover {
+    background-color: rgba(0, 0, 0, 0.253);
+    transition: 1s;
+}
+
+#btn-drt {
+    top: 50%;
+    right: 0;
+}
+
+#btn-esq {
+    top: 50%;
+    left: 0;
+}
+
+.bolinhas {
+    background-color: rgb(112, 112, 172);
+    padding: 7px;
+    margin: 5px;
+    border-radius: 50%;
+    border: none;
+    top: 100%;
+    cursor: pointer;
+}
+
+#bolinhas-div {
+    display: flex;
+    justify-content: center;
+}
+
+.azul-escuro {
+    background-color: rgb(34, 34, 65);
+}
+
+.legendaNum {
+    position: absolute;
+    top: 0;
+    padding: 5px;
+    color: white;
+}
+
+.legendaTxt p {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.541);
+    color: white;
+    text-align: center;
+    position: absolute;
+    padding-bottom: 1%;
+    padding-top: 1%;
+    bottom: 4%;
+}
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+  
+@-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+  
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}

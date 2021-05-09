@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <title>Slideshow</title>
+
+</head>
+<body>
+
+    <section id="slideshow">
+        <div class="fade slide">
+            <div class="legendaNum">1 / 3</div>
+            <img src="images/roma1.jpg" alt="">
+            <div class="legendaTxt">
+                <p>Arco di Constantino</p>
+            </div>
+        </div>
+        <div class="fade slide">
+            <div class="legendaNum">2 / 3</div>
+            <img src="images/roma2.jpg" alt="">
+            <div class="legendaTxt">
+                <p>Fontana di Trevi</p>
+            </div>
+        </div>
+        <div class="fade slide">
+            <div class="legendaNum">3 / 3</div>
+            <img src="images/roma3.jpg" alt="">
+            <div class="legendaTxt">
+                <p>Colosseo</p>
+            </div>
+        </div>
+
+        <div class="back-ground"></div>
+
+        <span class="setinhas" onclick="maisSlide(-1);" id="btn-esq">&#10094;</span>
+        <span class="setinhas" onclick="maisSlide(1);" id="btn-drt">&#10095;</span>
+
+        <div id="bolinhas-div">
+            <span class="bolinhas" onclick="slideAtual(1);"></span>
+            <span class="bolinhas" onclick="slideAtual(2);"></span>
+            <span class="bolinhas" onclick="slideAtual(3);"></span>
+        </div>
+    </section>
+  
+    <script src="JS/script.js"></script>
+
+</body>
+</html>
