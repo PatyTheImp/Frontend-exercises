@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css" type="text/css">
+    <title>Galeria de Imagens</title>
+
+    <script>
+        function openGaleria(idImg) {
+            //Section com opacidade
+            var section = document.getElementById("galeria-selected");
+            //Imagem em zoom
+            var img = document.getElementById("img-selected");
+            img.src = document.getElementById(idImg).src;
+
+            section.style.visibility = "visible";
+        }
+
+        function closeGaleria() {
+            //Section com opacidade
+            var section = document.getElementById("galeria-selected");
+
+            section.style.visibility = "hidden";
+        }
+
+    </script>
+
+</head>
+<body>
+
+    <div class="parent">
+            
+        <section id="galeria">
+            <div id="container1">
+                <img id="img1" onclick="openGaleria('img1');" src="imagens/algarve1.jpg" alt="">
+                <button onclick="openGaleria('img1');">ABRIR IMAGEM</button>
+            </div>
+            <div id="container2">
+                <img id="img2" onclick="openGaleria('img2');" src="imagens/algarve2.jpg" alt="">
+                <button onclick="openGaleria('img2');">ABRIR IMAGEM</button>
+            </div>
+            <div id="container3">
+                <img id="img3" onclick="openGaleria('img3');" src="imagens/algarve3.jpg" alt="">
+                <button onclick="openGaleria('img3');">ABRIR IMAGEM</button>
+            </div>
+            <div id="container4">
+                <img id="img4" onclick="openGaleria('img4');" src="imagens/algarve4.jpg" alt="">
+                <button onclick="openGaleria('img4');">ABRIR IMAGEM</button>
+            </div>
+            <div id="container5">
+                <img id="img5" onclick="openGaleria('img5');" src="imagens/algarve5.jpg" alt="">
+                <button onclick="openGaleria('img5');">ABRIR IMAGEM</button>
+            </div>
+            <div id="container6">
+                <img id="img6" onclick="openGaleria('img6');" src="imagens/algarve6.jpg" alt="">
+                <button onclick="openGaleria('img6');">ABRIR IMAGEM</button>
+            </div>
+        </section>
+
+        <section id="galeria-selected">
+            <span onclick="closeGaleria();">&#10006;</span>
+            <div>
+                <img id="img-selected" src="imagens/algarve1.jpg" alt="">
+            </div>
+        </section>
+
+    </div>
+    
+</body>
+</html>
